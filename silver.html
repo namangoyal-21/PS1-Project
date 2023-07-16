@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="refresh" content="300" charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap" rel="stylesheet">
+
+  <style media="screen">
+    header {
+      background-color: black;
+      color: silver;
+      height: 10vh;
+      text-align: center;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      font-size: 40px;
+      border: silver solid 4px;
+      font-family: 'Caprasimo', cursive;
+    }
+
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+
+      80% {
+        opacity: 0.5;
+      }
+    }
+
+    p1 {
+      display: inline-flex;
+      font-size: 40px;
+      margin: 29% 47%;
+      height: 13px;
+      animation: blink 1s linear infinite;
+    }
+
+    p2 {
+      font-size: 40px;
+      margin: 47%;
+      animation: blink 1s linear infinite;
+
+    }
+
+    .chartCard {
+      width: 100vw;
+      height: 100vh;
+      background: rgba(54, 162, 235, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .chartBox {
+      width: 650px;
+      height: 450px;
+      padding: 20px;
+      border-radius: 20px;
+      border: solid 3px rgba(54, 162, 235, 1);
+      background: white;
+
+    }
+
+    .container1 {
+      background-image: url("silver\ display.png");
+      background-repeat: no-repeat;
+      color: rgb(235, 14, 14);
+      border: silver solid 4px;
+      float: inline-start;
+    }
+    }
+  </style>
+
+</head>
+
+<body onclick="openFullscreen();" onload="openFullscreen();" onmouseover="openFullscreen();" oncontextmenu="openFullscreen()" ondrag="select()">
+  <header><b>Silver Rate Display</b></header>
+
+  <div class="chartCard">
+    <div class="chartBox">
+      <canvas height="410px" width="600px" id="myChartSilver"></canvas>
+    </div>
+    <div class="chartBox container1">
+      <p1 id="currentSilver10"></p1>
+      <p2 id="currentSilver1"></p2>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js" charset="utf-8"></script>
+</body>
+
+</html>
